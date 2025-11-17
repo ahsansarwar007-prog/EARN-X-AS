@@ -376,12 +376,183 @@
             const user = tg.initDataUnsafe.user;  
             if (user && user.id === ADMIN_ID) {  
                 adminPanel.style.display = 'block';  
-                userInfoDisplay.textContent = `Welcome, Admin! User: ${user.first_name} (@${user.username || 'N/A'}), ID: ${user.id}`;  
+               <!DOCTYPE HTML>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  
+    <title>EARN X AS </title>  <script src='//libtl.com/sdk.js' data-zone='10191827' data-sdk='show_10191827'></script>  
+<script src="https://telegram.org/js/telegram-web-app.js"></script>  
+
+<style>  
+    :root { --tg-theme-bg-color:#121212; --tg-theme-text-color:#e0e0e0; --tg-theme-button-color:#007bff;  
+        --tg-theme-button-text-color:#ffffff; --tg-theme-hint-color:#8a8a8a; --success-color:#28a745;  
+        --warning-color:#ffc107; --danger-color:#dc3545; --secondary-bg-color:#1e1e1e; --border-color:#333; }  
+    body { font-family:-apple-system, BlinkMacSystemFont,'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin:0;  
+        padding:20px 15px 90px 15px; background-color: var(--tg-theme-bg-color); color: var(--tg-theme-text-color);  
+        display:flex; flex-direction:column; align-items:center; text-align:center; min-height:100vh; box-sizing:border-box;}  
+    .container { width:100%; max-width:500px; }  
+    .view { display:none; width:100%; animation: fadeIn 0.3s ease-in-out; }  
+    #home-view { display:block; }  
+    @keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }  
+    .header { margin-bottom:25px; }  
+    .header h1 { font-size:32px; font-weight:700; margin-bottom:5px; color:#fff; }  
+    .header p { color: var(--tg-theme-hint-color); font-size:16px; }  
+    .card { background-color:var(--secondary-bg-color); padding:25px; border-radius:16px; margin-bottom:25px;  
+        box-shadow:0 8px 16px rgba(0,0,0,0.2); border:1px solid var(--border-color); }  
+    .card h2 { margin:0 0 12px 0; font-size:16px; color: var(--tg-theme-hint-color); font-weight:500; text-transform:uppercase; letter-spacing:0.5px; }  
+    .balance-amount { font-size:42px; font-weight:700; color:#fff; margin-bottom:10px; }  
+    .ad-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:15px; text-align:center; }  
+    .ad-info-item h3 { font-size:20px; font-weight:600; margin:0 0 5px 0; color:#fff; }  
+    .ad-info-item p { font-size:14px; color: var(--tg-theme-hint-color); margin:0; }  
+    .ad-buttons { display:flex; flex-direction:column; gap:15px; margin-bottom:25px; }  
+    .btn { width:100%; padding:16px; font-size:18px; font-weight:600; border:none; border-radius:12px; cursor:pointer;  
+        transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;  
+        background:linear-gradient(145deg, var(--tg-theme-button-color), #0056b3); color:var(--tg-theme-button-text-color);  
+        box-shadow:0 4px 10px rgba(0,123,255,0.2); }  
+    .btn:hover { transform:translateY(-2px); box-shadow:0 6px 15px rgba(0,123,255,0.3); }  
+    .btn:active { transform:scale(0.98); }  
+    .btn:disabled { background:#555; color:#888; cursor:not-allowed; box-shadow:none; transform:none; }  
+    #mainWithdrawBtn { background:linear-gradient(145deg, var(--success-color), #1e7e34); box-shadow:0 4px 10px rgba(40,167,69,0.2); }  
+    #mainWithdrawBtn:disabled { background:#555; box-shadow:none; }  
+    .status-message { position:fixed; bottom:80px; left:50%; transform:translateX(-50%); width:90%; max-width:480px;  
+        padding:12px 15px; border-radius:10px; font-weight:500; display:none; animation:fadeIn 0.3s; z-index:1000; box-sizing:border-box; }  
+    .success { display:block; background-color:rgba(40,167,69,0.25); border-left:5px solid var(--success-color); color:var(--success-color);}  
+    .error { display:block; background-color:rgba(220,53,69,0.25); border-left:5px solid var(--danger-color); color:var(--danger-color);}  
+    .info { display:block; background-color:rgba(0,123,255,0.25); border-left:5px solid var(--tg-theme-button-color); color:#008cff;}  
+    .footer-nav { position:fixed; bottom:0; left:0; right:0; background-color:var(--secondary-bg-color); display:flex;  
+        justify-content:space-around; padding:10px 0; box-shadow:0 -4px 12px rgba(0,0,0,0.3); border-top:1px solid var(--border-color); z-index:999; }  
+    .nav-btn { background:none; border:none; color: var(--tg-theme-hint-color); display:flex; flex-direction:column; align-items:center; font-size:12px; font-weight:500; cursor:pointer; padding:5px 15px; border-radius:12px; transition:color 0.2s, background-color 0.2s;}  
+    .nav-btn.active { color: var(--tg-theme-button-color);}  
+    .nav-btn:hover:not(.active) { color:#fff;}  
+    .nav-btn .icon { width:28px; height:28px; margin-bottom:4px;}  
+    .input-group { margin-bottom:20px; text-align:left; }  
+    .input-group label { display:block; margin-bottom:8px; color: var(--tg-theme-hint-color); font-size:14px; font-weight:500;}  
+    .input-group input { width:100%; padding:14px; border-radius:10px; border:1px solid var(--border-color); background-color:#333; color: var(--tg-theme-text-color); font-size:16px; box-sizing:border-box;}  
+    .input-group input:focus { outline:none; border-color: var(--tg-theme-button-color); box-shadow:0 0 0 3px rgba(0,123,255,0.2);}  
+    #referralLink { background-color:#111; padding:15px; border-radius:10px; word-wrap:break-word; border:1px dashed var(--tg-theme-hint-color); margin-top:15px; cursor:pointer; color:#e0e0e0; transition:background-color 0.2s; text-align:left; }  
+    #referralLink:hover { background-color:#2a2a2a; }  
+    .admin-panel { display:none; margin-top:30px; padding:15px; border:1px solid var(--warning-color); border-radius:10px; background-color:rgba(255,193,7,0.1);}  
+    .admin-panel h3 { color:var(--warning-color); margin-top:0; }  
+</style>
+
+</head>  
+<body>  
+<script type='text/javascript' src='//pl26604097.profitableratecpm.com/0f/56/94/0f5694f9b53dd9db6b20e82218735b99.js'></script>  <div class="container">  
+    <!-- Home / Task View -->  
+    <div id="home-view" class="view">...</div>  
+    <div id="withdraw-view" class="view">...</div>  
+    <div id="referral-view" class="view">...</div>  <!-- Admin Panel -->  
+<div class="admin-panel" id="adminPanel">  
+    <h3>👑 Admin Panel</h3>  
+    <div id="userList" style="margin-bottom:15px;"></div>  
+    <div style="margin-bottom: 10px;">  
+        <input type="number" id="adminAddBalance" placeholder="Add USDT" style="padding:8px;border-radius:8px;width:45%;">  
+        <button id="adminAddBtn" style="padding:8px 12px;border-radius:8px;cursor:pointer;">Add</button>  
+        <input type="number" id="adminDeductBalance" placeholder="Deduct USDT" style="padding:8px;border-radius:8px;width:45%;">  
+        <button id="adminDeductBtn" style="padding:8px 12px;border-radius:8px;cursor:pointer;">Deduct</button>  
+    </div>  
+    <div style="margin-bottom: 10px;">  
+        <button id="adminResetDaily" style="padding:8px 12px;border-radius:8px;cursor:pointer;">Reset Daily Ads</button>  
+        <button id="adminResetAll" style="padding:8px 12px;border-radius:8px;cursor:pointer;">Reset All Users</button>  
+    </div>  
+    <div id="withdrawRequests" style="margin-top:15px;">  
+        <h4>Withdrawal Requests</h4>  
+        <div id="withdrawList">No requests yet.</div>  
+    </div>  
+</div>
+
+</div>  <footer class="footer-nav">...</footer>  <script>  
+document.addEventListener('DOMContentLoaded', function () {  
+    const tg = window.Telegram.WebApp;  
+    const balanceDisplay = document.getElementById('balanceDisplay'), adCountDisplay = document.getElementById('adCountDisplay'),  
+        dailyAdCountDisplay = document.getElementById('dailyAdCountDisplay'), rewardedBtn = document.getElementById('rewardedBtn'),  
+        mainWithdrawBtn = document.getElementById('mainWithdrawBtn'), statusMessage = document.getElementById('statusMessage'),  
+        withdrawBalanceDisplay = document.getElementById('withdrawBalanceDisplay'), paymentAddressInput = document.getElementById('paymentAddress'),  
+        finalWithdrawBtn = document.getElementById('finalWithdrawBtn'), referralLinkDisplay = document.getElementById('referralLink'),  
+        referralCountDisplay = document.getElementById('referralCountDisplay'), referralBonusDisplay = document.getElementById('referralBonusDisplay'),  
+        adminPanel = document.getElementById('adminPanel'), userInfoDisplay = document.getElementById('userInfo');  
+  
+    const ADMIN_ID = 6706868364;  
+    const BOT_USERNAME = 'EARNXAS_Bot';  
+    const WEBAPP_NAME = 'EARN X AS';  
+    const WITHDRAW_THRESHOLD = 1;  
+    const AD_REWARD_CENTS = 1;  
+    const REFERRAL_BONUS_USDT = 0.5;  
+    const DAILY_AD_LIMIT = 20;  
+  
+    let state = { balanceInCents:0, totalAdCount:0, dailyAdCount:0, lastAdDate:null, referralCount:0};  
+  
+    function getTodayDateString(){ return new Date().toISOString().split('T')[0]; }  
+    function loadState(){   
+        try{ const savedState = JSON.parse(localStorage.getItem('earningAppUSDTState')); if(savedState){state={...state,...savedState;} } }  
+        catch(e){ console.error(e); }  
+        if(state.lastAdDate!==getTodayDateString()){ state.dailyAdCount=0; state.lastAdDate=getTodayDateString(); saveState(); }  
+    }  
+    function saveState(){ try{ localStorage.setItem('earningAppUSDTState',JSON.stringify(state)); } catch(e){ console.error(e); } }  
+    function updateUI(){   
+        const balanceInUSDT=(state.balanceInCents/100).toFixed(2);  
+        balanceDisplay.textContent=`USDT ${balanceInUSDT}`;  
+        adCountDisplay.textContent=state.totalAdCount;  
+        dailyAdCountDisplay.textContent=`${state.dailyAdCount} / ${DAILY_AD_LIMIT}`;  
+        withdrawBalanceDisplay.textContent=`USDT ${balanceInUSDT}`;  
+        referralCountDisplay.textContent=state.referralCount;  
+        referralBonusDisplay.textContent=`USDT ${(state.referralCount*REFERRAL_BONUS_USDT).toFixed(2)}`;  
+        const isWithdrawalPossible=parseFloat(balanceInUSDT)>=WITHDRAW_THRESHOLD;  
+        mainWithdrawBtn.disabled=!isWithdrawalPossible;  
+        mainWithdrawBtn.textContent=isWithdrawalPossible?'Go to Withdraw':`Reach ${WITHDRAW_THRESHOLD.toFixed(2)} USDT to Withdraw`;  
+        finalWithdrawBtn.disabled=!isWithdrawalPossible;  
+        finalWithdrawBtn.textContent=isWithdrawalPossible?`Withdraw ${balanceInUSDT} USDT`:`Minimum ${WITHDRAW_THRESHOLD.toFixed(2)} USDT required`;  
+        rewardedBtn.disabled=state.dailyAdCount>=DAILY_AD_LIMIT;  
+        rewardedBtn.textContent=state.dailyAdCount>=DAILY_AD_LIMIT?'Daily Limit Reached':'Watch Ad (+0.01 USDT)';  
+    }  
+    function showView(viewId){ document.querySelectorAll('.view').forEach(v=>v.style.display='none'); document.getElementById(viewId).style.display='block';  
+        document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));  
+        const activeNavId={'home-view':'navHome','withdraw-view':'navWithdraw','referral-view':'navRefer'}[viewId];  
+        if(activeNavId) document.getElementById(activeNavId).classList.add('active');  
+    }  
+    let statusTimeout;  
+    function showStatus(message,type,duration=4000){ clearTimeout(statusTimeout); statusMessage.textContent=message; statusMessage.className=`status-message ${type}`; statusMessage.style.display='block';  
+        statusTimeout=setTimeout(()=>{ statusMessage.style.display='none'; }, duration); }  
+  
+    function handleAdSuccess(){ state.totalAdCount++; state.dailyAdCount++; state.lastAdDate=getTodayDateString(); state.balanceInCents+=AD_REWARD_CENTS; showStatus(`Success! +${(AD_REWARD_CENTS/100).toFixed(2)} USDT has been added.`,'success'); saveState(); updateUI(); }  
+    function handleAdError(error){ console.error('Ad Error:', error); showStatus('Failed to load ad. Please try again.','error'); }  
+    function requestAd(){ if(state.dailyAdCount>=DAILY_AD_LIMIT){ showStatus("You've reached the daily ad limit.",'error'); return;} showStatus('Loading ad, please wait...','info'); Promise.resolve(show_10191827()).then(handleAdSuccess).catch(handleAdError); }  
+    function handleWithdrawal(){ const balanceInUSDT=(state.balanceInCents/100).toFixed(2); const walletAddress=paymentAddressInput.value.trim();  
+        if(parseFloat(balanceInUSDT)<WITHDRAW_THRESHOLD){ showStatus(`You need at least ${WITHDRAW_THRESHOLD.toFixed(2)} USDT to withdraw.`,'error'); return; }  
+        if(!walletAddress.startsWith('T')||walletAddress.length<34){ showStatus('Please enter a valid USDT (TRC20) wallet address.','error'); return; }  
+        const user=tg.initDataUnsafe.user;  
+        const message=`--- Withdrawal Request ---\n\nUser ID: ${user.id}\nName: ${user.first_name} ${user.last_name||''}\nUsername: @${user.username||'N/A'}\n\nAmount: ${balanceInUSDT} USDT\nWallet Address: ${walletAddress}`;  
+        tg.sendData(message); showStatus('Your withdrawal request has been sent for review.','success'); state.balanceInCents=0; saveState(); updateUI(); paymentAddressInput.value=''; showView('home-view'); }  
+  
+    function generateReferralLink(){ const user=tg.initDataUnsafe.user; if(user&&user.id&&BOT_USERNAME!=='YourBotUsername'&&WEBAPP_NAME!=='YourWebAppName'){ referralLinkDisplay.textContent=`https://t.me/${BOT_USERNAME}/${WEBAPP_NAME}?startapp=ref${user.id}`;} else { referralLinkDisplay.textContent="Referral link cannot be generated. Configure bot info in the script."; referralLinkDisplay.style.color="var(--warning-color)"; referralLinkDisplay.style.cursor="default";} }  
+  
+    function handleReferralStart(){ if(tg.initDataUnsafe.start_param){ const referrerId=tg.initDataUnsafe.start_param.replace('ref',''); console.log("Referrer ID:",referrerId); showStatus('Welcome! You joined via a referral link.','success',5000); } }  
+  
+    rewardedBtn.addEventListener('click',()=>requestAd());  
+    finalWithdrawBtn.addEventListener('click',handleWithdrawal);  
+    document.getElementById('navHome').addEventListener('click',()=>showView('home-view'));  
+    document.getElementById('navWithdraw').addEventListener('click',()=>showView('withdraw-view'));  
+    document.getElementById('navRefer').addEventListener('click',()=>showView('referral-view'));  
+    mainWithdrawBtn.addEventListener('click',()=>showView('withdraw-view'));  
+  
+    referralLinkDisplay.addEventListener('click',()=>{ if(navigator.clipboard&&referralLinkDisplay.textContent.startsWith('https://')){ navigator.clipboard.writeText(referralLinkDisplay.textContent).then(()=>showStatus('Referral link copied!','success')).catch(()=>showStatus('Could not copy link.','error')); } });  
+  
+    function initializeApp(){ if(tg&&tg.ready) tg.ready(); if(tg&&tg.expand) tg.expand(); loadState(); updateUI(); generateReferralLink(); handleReferralStart();  
+        const user=tg.initDataUnsafe.user;  
+        if(user&&user.id===ADMIN_ID){  
+            adminPanel.style.display='block';  
+            function loadUserData(){ const allUsers=JSON.parse(localStorage.getItem('earningAppUSDTState'))||state;  
+                document.getElementById('userList').innerHTML=`<p><strong>Current User Data:</strong></p>  
+                <p>Balance: USDT ${(allUsers.balanceInCents/100).toFixed(2)}</p>  
+                <p>Total Ads Watched: ${allUsers.totalAdCount}</p>  
+                <p>Daily Ads: ${allUsers.dailyAdCount} / ${DAILY_AD_LIMIT}</p>  
+                <p>Referrals: ${allUsers.referralCount}</p>`; } userInfoDisplay.textContent = `Welcome, Admin! User: ${user.first_name} (@${user.username || 'N/A'}), ID: ${user.id}`;  
             }  
         }  
 
         initializeApp();  
     });  
+    
 </script>
 
 </body>  
